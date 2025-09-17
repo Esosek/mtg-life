@@ -4,6 +4,7 @@
   const playerLives = $state([20, 20])
 
   function incrementLife(playerIndex: number) {
+    console.log('increment called')
     playerLives[playerIndex] += 1
   }
 
