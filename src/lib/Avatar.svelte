@@ -28,7 +28,7 @@
   {#if isPicking}
     <div
       transition:fly={{ duration: 250, y: 400 }}
-      class="absolute bottom-0 left-0 right-0 bg-neutral-800/95 rounded-t-2xl p-4 pt-10"
+      class="absolute bottom-0 left-0 right-0 bg-neutral-800/95 rounded-t-2xl p-2 pt-8 z-10"
     >
       <button
         onclick={togglePicking}
