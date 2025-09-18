@@ -11,7 +11,11 @@
     onDecrement: () => void
   }
   const { life, ...props }: CounterProps = $props()
-  let selectedColor = $state(CounterThemes.White)
+
+  const randomColorIndex = Math.round(Math.random() * (Object.values(CounterThemes).length - 1))
+  const initialColor = Object.values(CounterThemes)[randomColorIndex]
+  let selectedColor = $state(initialColor)
+
   let isAnimatingLife = $state(false)
 
   setContext('selectedColor', () => selectedColor)
