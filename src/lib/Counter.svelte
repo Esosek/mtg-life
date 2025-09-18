@@ -1,5 +1,6 @@
 <script lang="ts">
   import skullIcon from '../assets/skull-icon.svg'
+  import Avatar from './Avatar.svelte'
 
   type CounterProps = {
     life: number
@@ -32,6 +33,7 @@
 </script>
 
 <div class="relative grid grid-cols-2 bg-green-800 text-5xl text-neutral-200">
+  <!-- Life -->
   <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center text-9xl pointer-events-none">
     {#if life <= 0}
       <img src={skullIcon} alt="Skull icon" class="skull size-30" />
@@ -41,8 +43,13 @@
       </span>
     {/if}
   </div>
+  <!-- Controls  -->
   <button class="text-left pl-6" disabled={life <= 0} onclick={onDecrement}>-</button>
   <button class="text-right pr-6" onclick={onIncrement}>+</button>
+
+  <div class="absolute bottom-12 left-0 right-0 flex justify-center pointer-events-none">
+    <Avatar />
+  </div>
 </div>
 
 <style>
