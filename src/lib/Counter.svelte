@@ -1,6 +1,9 @@
 <script lang="ts">
+  import { setContext } from 'svelte'
+
   import skullIcon from '../assets/skull-icon.svg'
   import Avatar from './Avatar.svelte'
+  import CounterThemes from './counter-themes'
 
   type CounterProps = {
     life: number
@@ -8,7 +11,11 @@
     onDecrement: () => void
   }
   const { life, ...props }: CounterProps = $props()
+  let selectedColor = $state(CounterThemes.White)
   let isAnimatingLife = $state(false)
+
+  setContext('selectedColor', () => selectedColor)
+  setContext('onColorChanged', onColorChanged)
 
   function onIncrement() {
     props.onIncrement()
@@ -30,9 +37,16 @@
       isAnimatingLife = false
     }, 150)
   }
+
+  function onColorChanged(color: string) {
+    selectedColor = color
+  }
 </script>
 
-<div class="relative grid grid-cols-2 bg-green-800 text-5xl text-neutral-200">
+<div
+  style={`background-color: ${selectedColor}`}
+  class={`${selectedColor === CounterThemes.White ? 'text-neutral-900' : 'text-neutral-200'} relative grid grid-cols-2 text-5xl `}
+>
   <!-- Life -->
   <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center text-9xl pointer-events-none">
     {#if life <= 0}

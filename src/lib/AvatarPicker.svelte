@@ -1,12 +1,12 @@
 <script lang="ts">
   import Avatars from './avatars'
 
-  type AvatarPickerType = {
+  type AvatarPickerProps = {
     selectedAvatar: string
     onAvatarChanged: (avatar: string) => void
   }
 
-  const { selectedAvatar, onAvatarChanged }: AvatarPickerType = $props()
+  const { selectedAvatar, onAvatarChanged }: AvatarPickerProps = $props()
 </script>
 
 <div>
@@ -16,7 +16,7 @@
       <li>
         <button
           onclick={() => onAvatarChanged(avatar)}
-          class={`${selectedAvatar == avatar ? 'outline-3 outline-green-500' : ''} size-10 rounded-full overflow-clip`}
+          class={`${selectedAvatar === avatar ? 'outline-3 outline-green-500' : ''} size-10 rounded-full overflow-clip`}
         >
           <img src={avatar} alt={`${avatar} avatar`} />
         </button>
