@@ -47,7 +47,7 @@
   <button class="text-left pl-6" disabled={life <= 0} onclick={onDecrement}>-</button>
   <button class="text-right pr-6" onclick={onIncrement}>+</button>
 
-  <div class="absolute bottom-12 left-0 right-0 flex justify-center pointer-events-none">
+  <div class="absolute bottom-0 left-0 right-0 pb-[5%] flex justify-center pointer-events-none">
     <Avatar />
   </div>
 </div>
