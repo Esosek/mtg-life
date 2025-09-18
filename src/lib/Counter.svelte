@@ -6,17 +6,67 @@
     onIncrement: () => void
     onDecrement: () => void
   }
-  const { life, onIncrement, onDecrement }: CounterProps = $props()
+  const { life, ...props }: CounterProps = $props()
+  let isAnimatingLife = $state(false)
+
+  function onIncrement() {
+    props.onIncrement()
+    if (!isAnimatingLife) {
+      animateLife()
+    }
+  }
+
+  function onDecrement() {
+    props.onDecrement()
+    if (!isAnimatingLife) {
+      animateLife()
+    }
+  }
+
+  function animateLife() {
+    isAnimatingLife = true
+    setTimeout(() => {
+      isAnimatingLife = false
+    }, 150)
+  }
 </script>
 
 <div class="relative grid grid-cols-2 bg-green-800 text-5xl">
   <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center text-9xl pointer-events-none">
     {#if life <= 0}
-      <img src={skullIcon} alt="Skull icon" class="size-30" />
+      <img src={skullIcon} alt="Skull icon" class="skull size-30" />
     {:else}
-      {life}
+      <span class={isAnimatingLife ? 'scale' : ''}>
+        {life}
+      </span>
     {/if}
   </div>
   <button class="text-left pl-6" disabled={life <= 0} onclick={onDecrement}>-</button>
   <button class="text-right pr-6" onclick={onIncrement}>+</button>
 </div>
+
+<style>
+  .scale {
+    animation: scale-bounce 150ms linear forwards;
+  }
+
+  .skull {
+    animation: spin 3s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes scale-bounce {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.95);
+    }
+  }
+</style>
