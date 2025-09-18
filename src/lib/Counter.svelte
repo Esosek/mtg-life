@@ -49,7 +49,7 @@
 
 <div
   style={`background-color: ${selectedColor}`}
-  class={`${selectedColor === CounterThemes.White ? 'text-neutral-900' : 'text-neutral-200'} relative grid grid-cols-2 text-5xl `}
+  class={`${selectedColor === CounterThemes.White ? 'text-neutral-900' : 'text-neutral-200'} counter relative grid grid-cols-2 text-5xl `}
 >
   <!-- Life -->
   <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center text-9xl pointer-events-none">
@@ -71,6 +71,10 @@
 </div>
 
 <style>
+  .counter {
+    touch-action: manipulation;
+  }
+
   .scale {
     animation: scale-bounce 150ms linear forwards;
   }
