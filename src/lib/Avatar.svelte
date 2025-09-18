@@ -1,9 +1,10 @@
 <script lang="ts">
+  import { fly } from 'svelte/transition'
+
   import checkIcon from '../assets/check-icon.svg'
   import Avatars from './avatars'
   import AvatarPicker from './AvatarPicker.svelte'
   import ColorPicker from './ColorPicker.svelte'
-  import { slide, fly, fade } from 'svelte/transition'
 
   const randomAvatarIndex = Math.round(Math.random() * (Object.keys(Avatars).length - 1))
   const initialAvatar = Object.values(Avatars)[randomAvatarIndex]
