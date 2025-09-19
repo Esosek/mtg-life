@@ -17,12 +17,25 @@
   let selectedColor = $state(initialColor)
 
   let isAnimatingLife = $state(false)
+  let lifeChanged = $state(0)
+
+  let incrementBtn: HTMLButtonElement
+  let decrementBtn: HTMLButtonElement
 
   setContext('selectedColor', () => selectedColor)
   setContext('onColorChanged', onColorChanged)
 
   function onIncrement() {
     props.onIncrement()
+
+    lifeChanged += 1
+    setLifeChanged()
+
+    incrementBtn.classList.add('bg-neutral-600/30')
+    setTimeout(() => {
+      incrementBtn.classList.remove('bg-neutral-600/30')
+    }, 100)
+
     if (!isAnimatingLife) {
       animateLife()
     }
@@ -30,6 +43,15 @@
 
   function onDecrement() {
     props.onDecrement()
+
+    lifeChanged -= 1
+    setLifeChanged()
+
+    decrementBtn.classList.add('bg-neutral-600/30')
+    setTimeout(() => {
+      decrementBtn.classList.remove('bg-neutral-600/30')
+    }, 100)
+
     if (!isAnimatingLife) {
       animateLife()
     }
@@ -42,6 +64,14 @@
     }, 150)
   }
 
+  let timeout: number
+  function setLifeChanged() {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => {
+      lifeChanged = 0
+    }, 750)
+  }
+
   function onColorChanged(color: string) {
     selectedColor = color
   }
@@ -49,7 +79,7 @@
 
 <div
   style={`background-color: ${selectedColor}`}
-  class={`${selectedColor === CounterThemes.White ? 'text-neutral-900' : 'text-neutral-200'} counter relative grid grid-cols-2 text-5xl rounded-4xl`}
+  class="text-neutral-200 counter relative grid grid-cols-2 text-5xl rounded-4xl"
 >
   <!-- Life -->
   <div class="absolute top-0 bottom-0 left-0 right-0 flex items-center justify-center text-9xl pointer-events-none">
@@ -62,8 +92,23 @@
     {/if}
   </div>
   <!-- Controls  -->
-  <button class="text-left pl-6" disabled={life <= 0} onclick={onDecrement}>-</button>
-  <button class="text-right pr-6" onclick={onIncrement}>+</button>
+  <button
+    bind:this={decrementBtn}
+    class="text-left pl-6 transition-colors duration-100"
+    disabled={life <= 0}
+    onclick={onDecrement}
+  >
+    -
+    {#if lifeChanged < 0}
+      {Math.abs(lifeChanged)}
+    {/if}
+  </button>
+  <button bind:this={incrementBtn} class="text-right pr-6 transition-colors duration-100" onclick={onIncrement}>
+    +
+    {#if lifeChanged > 0}
+      {lifeChanged}
+    {/if}
+  </button>
 
   <div class="absolute bottom-0 left-0 right-0 pb-[5%] flex justify-center pointer-events-none">
     <Avatar />
