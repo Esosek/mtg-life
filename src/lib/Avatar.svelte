@@ -32,7 +32,7 @@
     >
       <button
         onclick={togglePicking}
-        class="absolute -top-6 left-0 right-0 size-12 mx-auto bg-cyan-700 rounded-full flex justify-center items-center"
+        class="absolute -top-6 left-6 size-12 mx-auto bg-cyan-700 rounded-full flex justify-center items-center"
       >
         <img src={checkIcon} alt="Check icon" />
       </button>
