@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Counter from './lib/Counter.svelte'
-  import ResetBtn from './lib/ResetBtn.svelte'
+  import Counter from './lib/counter/Counter.svelte'
+  import ResetBtn from './lib/counter/ResetBtn.svelte'
 
   let playerLives = $state([20, 20])
 

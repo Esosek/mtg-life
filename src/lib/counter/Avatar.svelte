@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fly } from 'svelte/transition'
 
-  import checkIcon from '../assets/check-icon.svg'
+  import checkIcon from '../../assets/check-icon.svg'
   import Avatars from './avatars'
   import AvatarPicker from './AvatarPicker.svelte'
   import ColorPicker from './ColorPicker.svelte'
