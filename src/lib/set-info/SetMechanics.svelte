@@ -1,6 +1,7 @@
 <script lang="ts">
-  import { fade, fly } from 'svelte/transition'
+  import { fly } from 'svelte/transition'
   import setDetails from './set-details'
+  import chevronIcon from '../../assets/chevron-left.svg'
 
   type SetMechanicsProps = {
     selectedSet: string
@@ -15,11 +16,21 @@
 
 {#each setData.mechanics as mechanic, index}
   <div class="mb-6">
-    <h3 class="text-2xl my-4">
-      <button onclick={() => (isMechanicExpanded[index] = !isMechanicExpanded[index])}>{mechanic.name}</button>
+    <h3 class="text-2xl my-4 flex justify-between">
+      <button
+        onclick={() => (isMechanicExpanded[index] = !isMechanicExpanded[index])}
+        class="w-full text-left flex justify-between items-center"
+      >
+        {mechanic.name}
+        <img
+          src={chevronIcon}
+          alt="Chevron icon"
+          class={`${isMechanicExpanded[index] ? '-rotate-90' : ''} size-6 transition-transform duration-300`}
+        /></button
+      >
     </h3>
     {#if isMechanicExpanded[index]}
-      <div in:fly={{ x: index % 2 != 0 ? 375 : -375 }} class="flex flex-col gap-4">
+      <div transition:fly={{ x: -375, duration: 300 }} class="flex flex-col gap-4">
         <p>
           {mechanic.description}
         </p>
