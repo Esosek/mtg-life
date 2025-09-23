@@ -1,4 +1,6 @@
-export const edgeOfEternities = {
+import type { SetDetail } from '../set-details'
+
+export const edgeOfEternities: SetDetail = {
   mechanics: [
     {
       name: 'Spacecraft',
@@ -59,5 +61,55 @@ export const edgeOfEternities = {
         'https://cards.scryfall.io/large/front/2/d/2dc7cc17-5319-4694-99c6-8c56a0b40a44.jpg?1752947156',
       ],
     },
+  ],
+  archetypes: [
+    {
+      colors: '{W}{U}',
+      name: 'Second Spell',
+      description: {
+        en: 'Cast your second spell in a turn and earn additional bonuses to overwhelm your opponent.',
+        cs: 'Zahraj svou druhou kartu v jednom tahu a získej další bonusy, kterými přemůžeš svého soupeře.',
+      },
+      keywords: {
+        en: ['second spell in a turn', 'cheap spells'],
+        cs: ['více kouzel v kole', 'levná kouzla'],
+      },
+      signatureCards: [
+        'https://cards.scryfall.io/large/front/b/a/ba9f6d16-ee3e-4fbb-b78a-6292188eb61f.jpg?1752947501',
+        'https://cards.scryfall.io/large/front/5/f/5f60b09d-9814-4a36-a57d-59b0e04c1c2f.jpg?1752946716',
+        'https://cards.scryfall.io/large/front/a/b/abc83e0a-0ae5-4087-a751-058a1ba6a920.jpg?1752946778',
+      ],
+    },
+    {
+      colors: '{U}{B}',
+      name: 'Artifact Control',
+      description: {
+        en: "Assemble an artifact-based deck to grind out your opponent's resources turn by turn.",
+        cs: 'Sestav balíček založený na artefaktech, abys krok za krokem vyčerpával zdroje svého soupeře.',
+      },
+      keywords: {
+        en: ['artifacts', 'card draw', 'control'],
+        cs: ['artefakty', 'dobírání karet', 'control'],
+      },
+      signatureCards: [
+        'https://cards.scryfall.io/large/front/3/4/349a2211-2b23-418d-a1ef-1c72ad2e171d.jpg?1752947420',
+        'https://cards.scryfall.io/large/front/7/b/7bfb33b6-e2bf-498f-8c58-ae21a840cf75.jpg?1752946757',
+        'https://cards.scryfall.io/large/front/5/b/5b2de056-5c27-44d6-871d-909411bd52dd.jpg?1752946852',
+      ],
+    },
+    //  {
+    //   colors: '{U}{B}',
+    //   name: '',
+    //   description: {
+    //     en: '',
+    //     cs: '',
+    //   },
+    //   keywords: {
+    //     en: [],
+    //     cs: [],
+    //   },
+    //   signatureCards: [
+    //   ],
+    // },
   ],
 }
