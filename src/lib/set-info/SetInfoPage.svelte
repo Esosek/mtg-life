@@ -3,6 +3,7 @@
   import LanguagePicker from '../common/LanguagePicker.svelte'
   import config from '../config.svelte'
   import setDetails from './set-details'
+  import SetArchetypes from './SetArchetypes.svelte'
   import SetMechanics from './SetMechanics.svelte'
   import SetPicker from './SetPicker.svelte'
 
@@ -14,4 +15,6 @@
   <SetPicker bind:value={selectedSet} />
   <Heading2>{config.language === 'en' ? 'Mechanics' : 'Mechaniky'}</Heading2>
   <SetMechanics {selectedSet} />
+  <Heading2>{config.language === 'en' ? 'Archetypes' : 'Archetypy'}</Heading2>
+  <SetArchetypes {selectedSet} />
 </div>
