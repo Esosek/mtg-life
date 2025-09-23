@@ -1,4 +1,5 @@
 <script lang="ts">
+  import NoSleep from 'nosleep.js'
   import { fly } from 'svelte/transition'
 
   import checkIcon from '../../assets/icons/check-icon.svg'
@@ -6,6 +7,7 @@
   import AvatarPicker from './AvatarPicker.svelte'
   import ColorPicker from './ColorPicker.svelte'
 
+  const noSleep = new NoSleep()
   const randomAvatarIndex = Math.round(Math.random() * (Object.keys(Avatars).length - 1))
   const initialAvatar = Object.values(Avatars)[randomAvatarIndex]
 
@@ -14,6 +16,10 @@
 
   function togglePicking() {
     isPicking = !isPicking
+
+    if (!noSleep.isEnabled) {
+      noSleep.enable()
+    }
   }
 
   function handleAvatarChanged(avatar: string) {
