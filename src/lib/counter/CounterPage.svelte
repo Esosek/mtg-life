@@ -1,7 +1,7 @@
 <script lang="ts">
   import Counter from './Counter.svelte'
   import ResetBtn from './ResetBtn.svelte'
-  import infoIcon from '../../assets/info-icon.svg'
+  import infoIcon from '../../assets/icons/info-icon.svg'
 
   type CounterPageProps = {
     onInfoOpened: () => void

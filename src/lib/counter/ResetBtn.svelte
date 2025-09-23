@@ -1,5 +1,5 @@
 <script lang="ts">
-  import resetIcon from '../../assets/reset-icon.svg'
+  import resetIcon from '../../assets/icons/reset-icon.svg'
 
   type ResetBtnProps = {
     onClick: () => void

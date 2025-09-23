@@ -1,7 +1,7 @@
 <script lang="ts">
   import { setContext } from 'svelte'
 
-  import skullIcon from '../../assets/skull-icon.svg'
+  import skullIcon from '../../assets/icons/skull-icon.svg'
   import Avatar from './Avatar.svelte'
   import CounterThemes from './counter-themes'
 

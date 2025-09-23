@@ -1,13 +1,13 @@
-import jaceAvatar from '../../assets/jace.jpg'
-import chandraAvatar from '../../assets/chandra.jpg'
-import ajaniAvatar from '../../assets/ajani.jpg'
-import lilianaAvatar from '../../assets/liliana.jpg'
-import garrukAvatar from '../../assets/garruk.jpg'
-import yajaAvatar from '../../assets/yaja.jpg'
-import nivmizzetAvatar from '../../assets/nivmizzet.jpg'
-import nissaAvatar from '../../assets/nissa.jpg'
-import sarkhanAvatar from '../../assets/sarkhan.jpg'
-import teferiAvatar from '../../assets/teferi.jpg'
+import jaceAvatar from '../../assets/avatars/jace.jpg'
+import chandraAvatar from '../../assets/avatars/chandra.jpg'
+import ajaniAvatar from '../../assets/avatars/ajani.jpg'
+import lilianaAvatar from '../../assets/avatars/liliana.jpg'
+import garrukAvatar from '../../assets/avatars/garruk.jpg'
+import yajaAvatar from '../../assets/avatars/yaja.jpg'
+import nivmizzetAvatar from '../../assets/avatars/nivmizzet.jpg'
+import nissaAvatar from '../../assets/avatars/nissa.jpg'
+import sarkhanAvatar from '../../assets/avatars/sarkhan.jpg'
+import teferiAvatar from '../../assets/avatars/teferi.jpg'
 
 const Avatars = {
   Jace: jaceAvatar,

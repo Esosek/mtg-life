@@ -1,7 +1,7 @@
 <script lang="ts">
   import { fly } from 'svelte/transition'
   import setDetails from './set-details'
-  import chevronIcon from '../../assets/chevron-left.svg'
+  import chevronIcon from '../../assets/icons/chevron-icon.svg'
   import { convertTextToSymbols } from '../utils/symbol-converter'
 
   type SetMechanicsProps = {
