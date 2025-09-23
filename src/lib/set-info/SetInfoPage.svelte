@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Heading2 from '../common/Heading2.svelte'
   import setDetails from './set-details'
   import SetMechanics from './SetMechanics.svelte'
   import SetPicker from './SetPicker.svelte'
@@ -8,6 +9,6 @@
 
 <div class="p-6 text-left">
   <SetPicker bind:value={selectedSet} />
-  <h2 class="font-medium text-4xl mt-8 mb-4">Mechanics</h2>
+  <Heading2>Mechanics</Heading2>
   <SetMechanics {selectedSet} />
 </div>
