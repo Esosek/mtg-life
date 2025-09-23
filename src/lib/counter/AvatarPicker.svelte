@@ -11,7 +11,7 @@
 
 <div>
   <p class="text-neutral-200 text-sm font-bold">AVATAR</p>
-  <ul class="flex justify-center gap-x-6 gap-y-3 mt-2 mb-4 flex-wrap">
+  <ul class="flex justify-center gap-x-6 gap-y-3 mt-2 mb-4 flex-wrap px-4">
     {#each Object.values(Avatars) as avatar}
       <li>
         <button

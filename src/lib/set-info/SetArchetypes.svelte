@@ -45,7 +45,13 @@
           {@html convertTextToSymbols(archetype.description[config.language] ?? archetype.description.en)}
         </p>
         {#each archetype.signatureCards as cardExample, index}
-          <img src={cardExample} alt={`${archetype.name} example card ${index + 1}`} class="rounded-2xl" />
+          <img
+            src={cardExample}
+            alt={`${archetype.name} example card ${index + 1}`}
+            class="rounded-2xl max-w-xs mx-auto"
+            width="320"
+            height="445"
+          />
         {/each}
       </div>
     {/if}

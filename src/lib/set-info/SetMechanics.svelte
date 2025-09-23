@@ -37,7 +37,13 @@
           {@html convertTextToSymbols(mechanic.description[config.language] ?? mechanic.description.en)}
         </p>
         {#each mechanic.examples as cardExample, index}
-          <img src={cardExample} alt={`${mechanic.name} example card ${index + 1}`} class="rounded-2xl" />
+          <img
+            src={cardExample}
+            alt={`${mechanic.name} example card ${index + 1}`}
+            class="rounded-2xl max-w-xs mx-auto"
+            width="320"
+            height="445"
+          />
         {/each}
       </div>
     {/if}
