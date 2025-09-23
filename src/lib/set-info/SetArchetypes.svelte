@@ -38,6 +38,9 @@
     </h3>
     {#if isArchetypeExpanded[index]}
       <div transition:fly={{ x: -375, duration: 300 }} class="flex flex-col gap-4">
+        <p class="font-bold uppercase text-sm">
+          {archetype.keywords[config.language]?.join(', ') ?? archetype.keywords.en.join(', ')}
+        </p>
         <p>
           {@html convertTextToSymbols(archetype.description[config.language] ?? archetype.description.en)}
         </p>
