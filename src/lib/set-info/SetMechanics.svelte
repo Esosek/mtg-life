@@ -3,6 +3,7 @@
   import setDetails from './set-details'
   import chevronIcon from '../../assets/icons/chevron-icon.svg'
   import { convertTextToSymbols } from '../utils/symbol-converter'
+  import config from '../config.svelte'
 
   type SetMechanicsProps = {
     selectedSet: string
@@ -33,7 +34,7 @@
     {#if isMechanicExpanded[index]}
       <div transition:fly={{ x: -375, duration: 300 }} class="flex flex-col gap-4">
         <p>
-          {@html convertTextToSymbols(mechanic.description)}
+          {@html convertTextToSymbols(mechanic.description[config.language] ?? mechanic.description.en)}
         </p>
         {#each mechanic.examples as cardExample, index}
           <img src={cardExample} alt={`${mechanic.name} example card ${index + 1}`} class="rounded-2xl" />

@@ -5,7 +5,7 @@ import { edgeOfEternities } from './sets/edge-of-eternities'
  */
 type SetMechanic = {
   name: string
-  description: string
+  description: { en: string; cs?: string }
   examples: string[]
 }
 
