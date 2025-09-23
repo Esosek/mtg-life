@@ -3,8 +3,8 @@ export const edgeOfEternities = {
     {
       name: 'Spacecraft',
       description: {
-        en: "Station (Tap another creature you control: Put charge counters equal to its power on this Spacecraft) Station only as a sorcery. It's an artifact creature at X+.",
-        cs: 'Station (Tapni jinou bytost, kterou kontroluješ: Umísti na tuto kosmickou loď tolik nabitých žetonů, kolik je její síla) Station lze použít pouze jako sorcery. Je to artefaktová bytost pokud má X+ žetonů.',
+        en: "<b>Station</b> (Tap another creature you control: Put charge counters equal to its power on this Spacecraft) <b>Station</b> only as a sorcery. It's an artifact creature at X+.",
+        cs: '<b>Station</b> (Tapni jinou bytost, kterou kontroluješ: Umísti na tuto kosmickou loď tolik nabitých žetonů, kolik je její síla) <b>Station</b> lze použít pouze jako sorcery. Je to artefaktová bytost pokud má X+ žetonů.',
       },
       examples: [
         'https://cards.scryfall.io/large/front/b/f/bf784de8-5ae2-4c07-92bb-a5b7f593b773.jpg?1755341417',
@@ -15,8 +15,8 @@ export const edgeOfEternities = {
     {
       name: 'Planet',
       description: {
-        en: 'Station (Tap another creature you control: Put charge counters equal to its power on this Planet. Station only as a sorcery.)',
-        cs: 'Station (Tapni jinou bytost, kterou kontroluješ: Umísti na tuto planetu tolik nabitých žetonů, kolik je její síla) Station lze použít pouze jako sorcery.',
+        en: '<b>Station</b> (Tap another creature you control: Put charge counters equal to its power on this Planet. <b>Station</b> only as a sorcery.)',
+        cs: '<b>Station</b> (Tapni jinou bytost, kterou kontroluješ: Umísti na tuto planetu tolik nabitých žetonů, kolik je její síla) <b>Station</b> lze použít pouze jako sorcery.',
       },
       examples: [
         'https://tcgplayer-cdn.tcgplayer.com/product/641742_in_1000x1000.jpg',
@@ -26,8 +26,8 @@ export const edgeOfEternities = {
     {
       name: 'Warp',
       description: {
-        en: 'Warp X (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)',
-        cs: 'Warp X (Můžeš zahrát tuto kartu z ruky za její warp cenu. Na začátku konce kola vyžeň tuto bytost do vyhnanství, poté ji můžeš z vyhnanství zahrát v jakémkoliv dalším kole.)',
+        en: '<b>Warp X</b> (You may cast this card from your hand for its warp cost. Exile this creature at the beginning of the next end step, then you may cast it from exile on a later turn.)',
+        cs: '<b>Warp X</b> (Můžeš zahrát tuto kartu z ruky za její warp cenu. Na začátku konce kola vyžeň tuto bytost do vyhnanství, poté ji můžeš z vyhnanství zahrát v jakémkoliv dalším kole.)',
       },
       examples: [
         'https://cards.scryfall.io/large/front/1/b/1beb7566-305e-4091-bdc4-cf4c789ac05a.jpg?1752947281',
@@ -38,7 +38,7 @@ export const edgeOfEternities = {
     {
       name: 'Void',
       description: {
-        en: 'If a nonland permanent left the battlefield this turn or a spell was warped this turn.',
+        en: 'If a nonland permanent left the battlefield this turn or a spell was <b>warped</b> this turn.',
         cs: 'Pokud tento tah odešel z bojiště nonland permanent nebo bylo zahráno kouzlo pomocí <b>Warp</b>.',
       },
       examples: [
