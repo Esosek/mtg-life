@@ -1,4 +1,5 @@
 <script lang="ts">
+  import NoSleep from 'nosleep.js'
   import Counter from './Counter.svelte'
   import ResetBtn from './ResetBtn.svelte'
   import infoIcon from '../../assets/icons/info-icon.svg'
@@ -8,6 +9,8 @@
   }
 
   const { onInfoOpened }: CounterPageProps = $props()
+
+  new NoSleep().enable()
 
   let playerLives = $state([20, 20])
   let hasUserInteracted = $state(false)
