@@ -65,7 +65,10 @@ export const edgeOfEternities: SetDetail = {
   archetypes: [
     {
       colors: '{W}{U}',
-      name: 'Second Spell',
+      name: {
+        en: 'Second Spell',
+        cs: 'Druhé Kouzlo',
+      },
       description: {
         en: 'Cast your second spell in a turn and earn additional bonuses to overwhelm your opponent.',
         cs: 'Zahraj svou druhou kartu v jednom tahu a získej další bonusy, kterými přemůžeš svého soupeře.',
@@ -82,7 +85,10 @@ export const edgeOfEternities: SetDetail = {
     },
     {
       colors: '{U}{B}',
-      name: 'Artifact Control',
+      name: {
+        en: 'Artifact Control',
+        cs: 'Artefaktový Control',
+      },
       description: {
         en: "Assemble an artifact-based deck to grind out your opponent's resources turn by turn.",
         cs: 'Sestav balíček založený na artefaktech, abys krok za krokem vyčerpával zdroje svého soupeře.',

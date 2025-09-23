@@ -16,7 +16,10 @@ type SetMechanic = {
 
 type SetArchetype = {
   colors: '{W}{U}' | '{U}{B}' | '{B}{R}' | '{R}{G}' | '{G}{W}' | '{W}{B}' | '{U}{R}' | '{B}{G}' | '{R}{W}' | '{G}{U}'
-  name: string
+  name: {
+    en: string
+    cs?: string
+  }
   keywords: {
     en: string[]
     cs?: string[]

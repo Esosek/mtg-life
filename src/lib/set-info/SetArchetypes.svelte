@@ -27,7 +27,7 @@
           <div class="flex items-center gap-1">
             {@html convertTextToSymbols(archetype.colors, '1.5rem')}
           </div>
-          {archetype.name}
+          {archetype.name[config.language] ?? archetype.name.en}
         </div>
         <img
           src={chevronIcon}
