@@ -8,9 +8,7 @@
   }
 </script>
 
-<button
-  onclick={() => setLanguage(config.language === 'en' ? 'cs' : 'en')}
-  class="size-8 rounded-full ml-auto block mb-6"
+<button onclick={() => setLanguage(config.language === 'en' ? 'cs' : 'en')} class="size-8 rounded-full ml-auto block"
   ><img
     src={config.language === 'en' ? csFlag : enFlag}
     alt={`${config.language === 'en' ? 'Czech' : 'United Kingdom'} flag`}

@@ -7,7 +7,7 @@
 
 <main class="relative max-w-sm text-center mx-auto min-h-lvh grid p-1 bg-neutral-900">
   {#if isInfoOpened}
-    <SetInfoPage />
+    <SetInfoPage onBack={() => (isInfoOpened = false)} />
   {:else}
     <CounterPage
       onInfoOpened={() => {
