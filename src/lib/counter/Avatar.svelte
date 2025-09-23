@@ -27,8 +27,8 @@
   }
 </script>
 
-<div class="pointer-events-auto">
-  <button onclick={togglePicking} class="size-16 rounded-full overflow-clip border-5 border-neutral-200">
+<div class="pointer-events-auto shadow-2xl size-16 rounded-full">
+  <button onclick={togglePicking} class="size-16 rounded-full overflow-clip">
     <img src={selectedAvatar} alt="Player avatar" />
   </button>
   {#if isPicking}
