@@ -40,7 +40,8 @@ export const edgeOfEternities = {
     },
     {
       name: 'Lander Tokens',
-      description: 'If a nonland permanent left the battlefield this turn or a spell was warped this turn.',
+      description:
+        '{2}, {T}, Sacrifice this token: Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.',
       examples: [
         'https://cards.scryfall.io/large/front/8/5/85ef1950-219f-401b-8ff5-914f9aaec122.jpg?1752946491',
         'https://cards.scryfall.io/large/front/8/5/85b898d2-050f-49a2-87af-07d54d105336.jpg?1752947308',

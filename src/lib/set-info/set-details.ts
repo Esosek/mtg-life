@@ -17,9 +17,6 @@ type SetDetails = {
 
 const setDetails: SetDetails = {
   'Edge Of Eternities': edgeOfEternities,
-  Aetherdrift: {
-    mechanics: '' as unknown as SetMechanic[],
-  },
 }
 
 export default setDetails
