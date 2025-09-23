@@ -18,7 +18,7 @@
           onclick={() => onAvatarChanged(avatar)}
           class={`${selectedAvatar === avatar ? 'outline-3 outline-green-500' : ''} size-10 rounded-full overflow-clip`}
         >
-          <img src={avatar} alt={`${avatar} avatar`} />
+          <img src={avatar} alt={`${avatar} avatar`} width="40" height="40" />
         </button>
       </li>
     {/each}
