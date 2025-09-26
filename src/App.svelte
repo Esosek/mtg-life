@@ -5,7 +5,7 @@
   let isInfoOpened = $state(false)
 </script>
 
-<main class="relative w-full text-center mx-auto min-h-lvh grid p-1 bg-neutral-900 max-w-xl">
+<main class="relative w-full text-center mx-auto min-h-dvh grid p-1 bg-neutral-900 max-w-xl">
   {#if isInfoOpened}
     <SetInfoPage onBack={() => (isInfoOpened = false)} />
   {:else}
