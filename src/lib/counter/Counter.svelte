@@ -5,6 +5,8 @@
   import Avatar from './Avatar.svelte'
   import CounterThemes from './counter-themes'
 
+  const LIFE_CHANGED_DURATION = 1500
+
   type CounterProps = {
     life: number
     onIncrement: () => void
@@ -69,7 +71,7 @@
     clearTimeout(timeout)
     timeout = setTimeout(() => {
       lifeChanged = 0
-    }, 750)
+    }, LIFE_CHANGED_DURATION)
   }
 
   function onColorChanged(color: string) {
