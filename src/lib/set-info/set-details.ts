@@ -1,4 +1,5 @@
 import { edgeOfEternities } from './sets/edge-of-eternities'
+import { outlawsOfThunderJunction } from './sets/outlaws-of-thunder-junction'
 
 export type SetDetail = {
   mechanics: SetMechanic[]
@@ -32,7 +33,8 @@ type SetArchetype = {
 }
 
 const setDetails: { [key: string]: SetDetail } = {
-  'Edge Of Eternities': edgeOfEternities,
+  'Edge of Eternities': edgeOfEternities,
+  'Outlaws of Thunder Junction': outlawsOfThunderJunction,
 }
 
 export default setDetails
