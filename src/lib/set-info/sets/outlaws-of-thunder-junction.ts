@@ -220,5 +220,17 @@ export const outlawsOfThunderJunction: SetDetail = {
         'https://cards.scryfall.io/large/front/6/c/6c4f6b81-53d0-49fb-b404-c2ad67de7493.jpg?1712356362',
       ],
     },
+    {
+      name: 'Deserts',
+      description: {
+        en: '',
+      },
+      examples: [
+        'https://cards.scryfall.io/large/front/1/9/19e96521-b4ce-4a36-a887-200e05ccc804.jpg?1712356303',
+        'https://cards.scryfall.io/large/front/3/a/3ab4e0a4-2faf-456b-99e3-ee06c008538c.jpg?1712356353',
+        'https://cards.scryfall.io/large/front/3/5/35e899e4-e2de-44cf-b6f4-cace8d3770cb.jpg?1712355575',
+        'https://cards.scryfall.io/large/front/c/9/c9458f0f-5593-4ac9-934c-e215ef8093a7.jpg?1712355958',
+      ],
+    },
   ],
 }
